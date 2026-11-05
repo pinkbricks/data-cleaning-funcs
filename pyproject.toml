@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data-profiler"
+version = "0.1.0"
+description = "Exact descriptive profiling of pandas DataFrames"
+requires-python = ">=3.10,<3.11"
+dependencies = ["pandas>=2.3.3,<2.4", "numpy>=2.2.6,<2.3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.setuptools]
+py-modules = ["data_profiler"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
